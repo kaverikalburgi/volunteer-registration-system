@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🌟 NayePankh Volunteer Dashboard
+        </div>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+    <div class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <div class="dashboard-header">
+            <h1>Welcome Volunteer 👋</h1>
+            <p>
+                Complete your profile and become part of
+                our mission to create positive change.
+            </p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="dashboard-cards">
+
+            <div class="card-box">
+                <h3>Profile Status</h3>
+                <p>Pending Review</p>
+            </div>
+
+            <div class="card-box">
+                <h3>NGO</h3>
+                <p>NayePankh Foundation</p>
+            </div>
+
+            <div class="card-box">
+                <h3>Role</h3>
+                <p>Volunteer</p>
+            </div>
+
+        </div>
+
+        <!-- Form -->
+        <div class="glass-form volunteer-form">
+
+            <h2>Volunteer Registration Form</h2>
+
+            <form id="volunteerForm">
+
+                <input type="text"
+                       id="phone"
+                       placeholder="Phone Number"
+                       required>
+
+                <textarea id="address"
+                          placeholder="Address"
+                          required></textarea>
+
+                <input type="text"
+                       id="skills"
+                       placeholder="Skills"
+                       required>
+
+                <input type="text"
+                       id="availability"
+                       placeholder="Availability"
+                       required>
+
+                <textarea id="motivation"
+                          placeholder="Why do you want to volunteer?"
+                          required></textarea>
+
+                <button type="submit">
+                    Submit Profile
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="../js/volunteer.js"></script>
+
+</body>
+
+</html>

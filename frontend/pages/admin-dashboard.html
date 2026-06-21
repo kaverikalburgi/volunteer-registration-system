@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Admin Dashboard
+        </div>
+
+        <button
+            onclick="logout()"
+            class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </nav>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h2 id="totalCount">0</h2>
+            <p>Total Volunteers</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="pendingCount">0</h2>
+            <p>Pending</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="approvedCount">0</h2>
+            <p>Approved</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="rejectedCount">0</h2>
+            <p>Rejected</p>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>
+            Volunteer Applications
+        </h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Volunteer..."
+            onkeyup="searchVolunteer()"
+            style="
+                width:100%;
+                padding:12px;
+                margin:20px 0;
+                border-radius:10px;
+                border:none;
+                outline:none;
+            "
+        >
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Skills</th>
+
+                    <th>Status</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="volunteerTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <a
+      href="http://localhost:5000/api/admin/export"
+      class="export-btn">
+        Download CSV Report
+
+</a>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
